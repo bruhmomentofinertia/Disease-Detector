@@ -1,0 +1,19 @@
+{% extends "region/base.html" %}
+{% load region_extras %}
+{% block content_no_container %}
+<div>
+<img src="{% static 'region/epi.jpg' %}" style="margin-left: auto; margin-right: auto; width: 75%; display: block;">
+</div>
+<form action = "graph/" method = "get">
+  <link rel="stylesheet" href="{% static 'region/form.css' %}">
+  <div class="container">
+    <label for="uname"><b>Select Region</b></label>
+    <input type="text" placeholder="Enter Region" name="uname" required>
+
+    <a href = "{% url '/graph' %}"><button onclick = "submitform()">Continue</button></a>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+</form>
+{% endblock %}

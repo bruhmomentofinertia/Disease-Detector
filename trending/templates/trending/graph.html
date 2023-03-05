@@ -1,0 +1,10 @@
+{% extends "trending/base.html" %}
+{% load region_extras %}
+{% block content_no_container %}
+<div>
+<img src="{% static 'region/epi.jpg' %}" style="margin-left: auto; margin-right: auto; width: 75%; display: block;">
+{% for symptom in symptoms%}
+  <h3 style = "text-align: center">Search result for "{{symptom}}" in Area {{code}}</h3>
+  <img src = "{% static 'trending/' %}{{code}}{{symptom}}.png" style="margin-left: auto; margin-right: auto; width: 75%; display: block;" alt = "Graph Could Not Be Produced Due to Insufficient Data">
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "graph/base.html" %}
+{% load region_extras %}
+{%load define_action %}
+{% block content_no_container %}
+<div>
+<img src="{% static 'graph/epi.jpg' %}" style="margin-left: auto; margin-right: auto; width: 75%; display: block;">
+</div>
+<link rel="stylesheet" href="{% static 'graph/graph.css' %}">
+<div>
+  <h2 style = "text-align: center">Your Region: {{region}}</h2>
+  <a href = "/"><button style="margin-left: 25%; margin-right;">Explore Various Regions</button></a>
+  <a href = "/trending"><button style="margin-left: 0%">Explore Food Borne Illnesses</button>
+</div></a>
+<div>
+  <h3 style = "text-align: center">Problem in {{region}}: COVID-19</h2>
+<img src="{% static 'graph/' %}{{region}} .png" alt="Fairfax County Plot" style = "margin-left: auto; margin-right: auto; width: 50%; display: block;">
+</div>
+
+
+{% endblock %}
